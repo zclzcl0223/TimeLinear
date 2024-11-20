@@ -1,0 +1,256 @@
+Args in experiment:
+[1mBasic Config[0m
+  Task Name:          long_term_forecast  Is Training:        1                   
+  Model ID:           ETTh1_96_336        Model:              TimeLinear          
+
+[1mData Loader[0m
+  Data:               ETTh1               Root Path:          ./dataset/ETT-small/
+  Data Path:          ETTh1.csv           Features:           M                   
+  Target:             OT                  Freq:               h                   
+  Checkpoints:        ./checkpoints/      
+
+[1mForecasting Task[0m
+  Seq Len:            96                  Label Len:          0                   
+  Pred Len:           336                 Seasonal Patterns:  Monthly             
+  Inverse:            0                   
+
+[1mModel Parameters[0m
+  Top k:              5                   Num Kernels:        6                   
+  Enc In:             7                   Dec In:             7                   
+  C Out:              7                   d model:            512                 
+  n heads:            8                   e layers:           2                   
+  d layers:           1                   d FF:               2048                
+  Moving Avg:         25                  Factor:             3                   
+  Distil:             1                   Dropout:            0.0                 
+  Embed:              timeF               Activation:         gelu                
+  Output Attention:   0                   
+
+[1mRun Parameters[0m
+  Num Workers:        10                  Itr:                1                   
+  Train Epochs:       20                  Batch Size:         128                 
+  Patience:           3                   Learning Rate:      0.01                
+  Des:                Exp                 Loss:               mse                 
+  Lradj:              type1               Use Amp:            0                   
+
+[1mGPU[0m
+  Use GPU:            1                   GPU:                0                   
+  Use Multi GPU:      0                   Devices:            0,1,2,3             
+
+[1mDe-stationary Projector Params[0m
+  P Hidden Dims:      128, 128            P Hidden Layers:    2                   
+
+Use GPU: cuda:0
+>>>>>>>start training : long_term_forecast_ETTh1_96_336_TimeLinear_ETTh1_ftM_ttHD_rda1_rdb1_ksize5_beta0.2_freqh_ebtimeF_bs128_Exp_2020>>>>>>>>>>>>>>>>>>>>>>>>>>
+Parameters: 111514
+train 8209
+val 2545
+test 2545
+Epoch: 1 cost time: 2.1790080070495605
+Epoch: 1, Steps: 64 | Train Loss: 0.5036004 Vali Loss: 1.2922310 Test Loss: 0.4722899
+Validation loss decreased (inf --> 1.292231).  Saving model ...
+Updating learning rate to 0.01
+Epoch: 2 cost time: 1.6707630157470703
+Epoch: 2, Steps: 64 | Train Loss: 0.4771648 Vali Loss: 1.2856943 Test Loss: 0.4677865
+Validation loss decreased (1.292231 --> 1.285694).  Saving model ...
+Updating learning rate to 0.005
+Epoch: 3 cost time: 1.6573681831359863
+Epoch: 3, Steps: 64 | Train Loss: 0.4730817 Vali Loss: 1.2895351 Test Loss: 0.4650579
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.0025
+Epoch: 4 cost time: 1.6839337348937988
+Epoch: 4, Steps: 64 | Train Loss: 0.4711643 Vali Loss: 1.2791401 Test Loss: 0.4646886
+Validation loss decreased (1.285694 --> 1.279140).  Saving model ...
+Updating learning rate to 0.00125
+Epoch: 5 cost time: 1.6849005222320557
+Epoch: 5, Steps: 64 | Train Loss: 0.4703295 Vali Loss: 1.2848111 Test Loss: 0.4625814
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.000625
+Epoch: 6 cost time: 1.6861577033996582
+Epoch: 6, Steps: 64 | Train Loss: 0.4698992 Vali Loss: 1.2844859 Test Loss: 0.4617437
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 0.0003125
+Epoch: 7 cost time: 1.66668701171875
+Epoch: 7, Steps: 64 | Train Loss: 0.4695521 Vali Loss: 1.2847811 Test Loss: 0.4617188
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : long_term_forecast_ETTh1_96_336_TimeLinear_ETTh1_ftM_ttHD_rda1_rdb1_ksize5_beta0.2_freqh_ebtimeF_bs128_Exp_2020<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2545
+test shape: (2545, 336, 7) (2545, 336, 7)
+test shape: (2545, 336, 7) (2545, 336, 7)
+mse:0.4646884500980377, mae:0.4389530420303345
+Args in experiment:
+[1mBasic Config[0m
+  Task Name:          long_term_forecast  Is Training:        1                   
+  Model ID:           ETTh1_96_336        Model:              TimeLinear          
+
+[1mData Loader[0m
+  Data:               ETTh1               Root Path:          ./dataset/ETT-small/
+  Data Path:          ETTh1.csv           Features:           M                   
+  Target:             OT                  Freq:               h                   
+  Checkpoints:        ./checkpoints/      
+
+[1mForecasting Task[0m
+  Seq Len:            96                  Label Len:          0                   
+  Pred Len:           336                 Seasonal Patterns:  Monthly             
+  Inverse:            0                   
+
+[1mModel Parameters[0m
+  Top k:              5                   Num Kernels:        6                   
+  Enc In:             7                   Dec In:             7                   
+  C Out:              7                   d model:            512                 
+  n heads:            8                   e layers:           2                   
+  d layers:           1                   d FF:               2048                
+  Moving Avg:         25                  Factor:             3                   
+  Distil:             1                   Dropout:            0.0                 
+  Embed:              timeF               Activation:         gelu                
+  Output Attention:   0                   
+
+[1mRun Parameters[0m
+  Num Workers:        10                  Itr:                1                   
+  Train Epochs:       20                  Batch Size:         128                 
+  Patience:           3                   Learning Rate:      0.01                
+  Des:                Exp                 Loss:               mse                 
+  Lradj:              type1               Use Amp:            0                   
+
+[1mGPU[0m
+  Use GPU:            1                   GPU:                0                   
+  Use Multi GPU:      0                   Devices:            0,1,2,3             
+
+[1mDe-stationary Projector Params[0m
+  P Hidden Dims:      128, 128            P Hidden Layers:    2                   
+
+Use GPU: cuda:0
+>>>>>>>start training : long_term_forecast_ETTh1_96_336_TimeLinear_ETTh1_ftM_ttHD_rda1_rdb1_ksize5_beta0.2_freqh_ebtimeF_bs128_Exp_2021>>>>>>>>>>>>>>>>>>>>>>>>>>
+Parameters: 111514
+train 8209
+val 2545
+test 2545
+Epoch: 1 cost time: 2.1699411869049072
+Epoch: 1, Steps: 64 | Train Loss: 0.5104088 Vali Loss: 1.2988518 Test Loss: 0.4804920
+Validation loss decreased (inf --> 1.298852).  Saving model ...
+Updating learning rate to 0.01
+Epoch: 2 cost time: 1.6742498874664307
+Epoch: 2, Steps: 64 | Train Loss: 0.4791824 Vali Loss: 1.2885233 Test Loss: 0.4739185
+Validation loss decreased (1.298852 --> 1.288523).  Saving model ...
+Updating learning rate to 0.005
+Epoch: 3 cost time: 1.6908652782440186
+Epoch: 3, Steps: 64 | Train Loss: 0.4738750 Vali Loss: 1.2866471 Test Loss: 0.4708929
+Validation loss decreased (1.288523 --> 1.286647).  Saving model ...
+Updating learning rate to 0.0025
+Epoch: 4 cost time: 1.6358222961425781
+Epoch: 4, Steps: 64 | Train Loss: 0.4718079 Vali Loss: 1.2824889 Test Loss: 0.4629730
+Validation loss decreased (1.286647 --> 1.282489).  Saving model ...
+Updating learning rate to 0.00125
+Epoch: 5 cost time: 1.6502013206481934
+Epoch: 5, Steps: 64 | Train Loss: 0.4706334 Vali Loss: 1.2872060 Test Loss: 0.4624160
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.000625
+Epoch: 6 cost time: 1.672292947769165
+Epoch: 6, Steps: 64 | Train Loss: 0.4704306 Vali Loss: 1.2853363 Test Loss: 0.4647478
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 0.0003125
+Epoch: 7 cost time: 1.6623709201812744
+Epoch: 7, Steps: 64 | Train Loss: 0.4698645 Vali Loss: 1.2853937 Test Loss: 0.4628683
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : long_term_forecast_ETTh1_96_336_TimeLinear_ETTh1_ftM_ttHD_rda1_rdb1_ksize5_beta0.2_freqh_ebtimeF_bs128_Exp_2021<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2545
+test shape: (2545, 336, 7) (2545, 336, 7)
+test shape: (2545, 336, 7) (2545, 336, 7)
+mse:0.4629727303981781, mae:0.43791162967681885
+Args in experiment:
+[1mBasic Config[0m
+  Task Name:          long_term_forecast  Is Training:        1                   
+  Model ID:           ETTh1_96_336        Model:              TimeLinear          
+
+[1mData Loader[0m
+  Data:               ETTh1               Root Path:          ./dataset/ETT-small/
+  Data Path:          ETTh1.csv           Features:           M                   
+  Target:             OT                  Freq:               h                   
+  Checkpoints:        ./checkpoints/      
+
+[1mForecasting Task[0m
+  Seq Len:            96                  Label Len:          0                   
+  Pred Len:           336                 Seasonal Patterns:  Monthly             
+  Inverse:            0                   
+
+[1mModel Parameters[0m
+  Top k:              5                   Num Kernels:        6                   
+  Enc In:             7                   Dec In:             7                   
+  C Out:              7                   d model:            512                 
+  n heads:            8                   e layers:           2                   
+  d layers:           1                   d FF:               2048                
+  Moving Avg:         25                  Factor:             3                   
+  Distil:             1                   Dropout:            0.0                 
+  Embed:              timeF               Activation:         gelu                
+  Output Attention:   0                   
+
+[1mRun Parameters[0m
+  Num Workers:        10                  Itr:                1                   
+  Train Epochs:       20                  Batch Size:         128                 
+  Patience:           3                   Learning Rate:      0.01                
+  Des:                Exp                 Loss:               mse                 
+  Lradj:              type1               Use Amp:            0                   
+
+[1mGPU[0m
+  Use GPU:            1                   GPU:                0                   
+  Use Multi GPU:      0                   Devices:            0,1,2,3             
+
+[1mDe-stationary Projector Params[0m
+  P Hidden Dims:      128, 128            P Hidden Layers:    2                   
+
+Use GPU: cuda:0
+>>>>>>>start training : long_term_forecast_ETTh1_96_336_TimeLinear_ETTh1_ftM_ttHD_rda1_rdb1_ksize5_beta0.2_freqh_ebtimeF_bs128_Exp_2022>>>>>>>>>>>>>>>>>>>>>>>>>>
+Parameters: 111514
+train 8209
+val 2545
+test 2545
+Epoch: 1 cost time: 2.1751034259796143
+Epoch: 1, Steps: 64 | Train Loss: 0.5035709 Vali Loss: 1.2954400 Test Loss: 0.4726486
+Validation loss decreased (inf --> 1.295440).  Saving model ...
+Updating learning rate to 0.01
+Epoch: 2 cost time: 1.668287992477417
+Epoch: 2, Steps: 64 | Train Loss: 0.4770732 Vali Loss: 1.2937890 Test Loss: 0.4696633
+Validation loss decreased (1.295440 --> 1.293789).  Saving model ...
+Updating learning rate to 0.005
+Epoch: 3 cost time: 1.6631708145141602
+Epoch: 3, Steps: 64 | Train Loss: 0.4727507 Vali Loss: 1.2893465 Test Loss: 0.4685290
+Validation loss decreased (1.293789 --> 1.289347).  Saving model ...
+Updating learning rate to 0.0025
+Epoch: 4 cost time: 1.6848435401916504
+Epoch: 4, Steps: 64 | Train Loss: 0.4704795 Vali Loss: 1.2851458 Test Loss: 0.4659501
+Validation loss decreased (1.289347 --> 1.285146).  Saving model ...
+Updating learning rate to 0.00125
+Epoch: 5 cost time: 1.6596348285675049
+Epoch: 5, Steps: 64 | Train Loss: 0.4697212 Vali Loss: 1.2851162 Test Loss: 0.4623544
+Validation loss decreased (1.285146 --> 1.285116).  Saving model ...
+Updating learning rate to 0.000625
+Epoch: 6 cost time: 1.675342321395874
+Epoch: 6, Steps: 64 | Train Loss: 0.4692462 Vali Loss: 1.2844904 Test Loss: 0.4628420
+Validation loss decreased (1.285116 --> 1.284490).  Saving model ...
+Updating learning rate to 0.0003125
+Epoch: 7 cost time: 1.673705816268921
+Epoch: 7, Steps: 64 | Train Loss: 0.4690106 Vali Loss: 1.2843965 Test Loss: 0.4629202
+Validation loss decreased (1.284490 --> 1.284396).  Saving model ...
+Updating learning rate to 0.00015625
+Epoch: 8 cost time: 1.7179591655731201
+Epoch: 8, Steps: 64 | Train Loss: 0.4688861 Vali Loss: 1.2843112 Test Loss: 0.4626401
+Validation loss decreased (1.284396 --> 1.284311).  Saving model ...
+Updating learning rate to 7.8125e-05
+Epoch: 9 cost time: 1.6713151931762695
+Epoch: 9, Steps: 64 | Train Loss: 0.4687133 Vali Loss: 1.2844813 Test Loss: 0.4625058
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.90625e-05
+Epoch: 10 cost time: 1.6700224876403809
+Epoch: 10, Steps: 64 | Train Loss: 0.4687235 Vali Loss: 1.2844596 Test Loss: 0.4626868
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.953125e-05
+Epoch: 11 cost time: 1.7089719772338867
+Epoch: 11, Steps: 64 | Train Loss: 0.4687969 Vali Loss: 1.2844666 Test Loss: 0.4626281
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : long_term_forecast_ETTh1_96_336_TimeLinear_ETTh1_ftM_ttHD_rda1_rdb1_ksize5_beta0.2_freqh_ebtimeF_bs128_Exp_2022<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2545
+test shape: (2545, 336, 7) (2545, 336, 7)
+test shape: (2545, 336, 7) (2545, 336, 7)
+mse:0.4626401960849762, mae:0.4380740523338318
