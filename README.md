@@ -32,10 +32,11 @@ The default `seq_len` in this repository is `96`. For other experimental setting
 --pred_len
 --batch_size
 --learning_rate
---rda               # reduction rate for the first hidden layer of TimeSter
---rdb               # reduction rate for the second hidden layer of TimeSter
---ksize             # kernel size for the Cov1d in TimeSter
---beta              # trade-off coefficient for the output of TimeSter and BonSter (the backbone results)
+--time_feature_types    # add your time-related features, e.g., HourOfDay DayOfWeek
+--rda                   # reduction rate for the first hidden layer of TimeSter
+--rdb                   # reduction rate for the second hidden layer of TimeSter
+--ksize                 # kernel size for the Cov1d in TimeSter
+--beta                  # trade-off coefficient for the output of TimeSter and BonSter (the backbone results)
 ```
 It is recommended to tune `rda` in {8, 4, 2, 1}, `rdb` in {1, 2}, `ksize` in {3, 5, 7}, and `beta` in {0.1, ..., 0.9}.
 
