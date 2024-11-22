@@ -9,7 +9,7 @@ import numpy as np
 
 if __name__ == '__main__':
 
-    parser = argparse.ArgumentParser(description='CMamba')
+    parser = argparse.ArgumentParser(description='TimeLinear')
 
     # basic config
     parser.add_argument('--seed', type=int, default=2021, help='random seed')
