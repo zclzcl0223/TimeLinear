@@ -40,7 +40,7 @@ The default `seq_len` in this repository is `96`. For other experimental setting
 ```
 It is recommended to tune `rda` in {8, 4, 2, 1}, `rdb` in {1, 2}, `ksize` in {3, 5, 7}, and `beta` in {0.1, ..., 0.9}.
 
-We also provide the experimental scripts for Table 3, 4 and 5, where we combine TimeSter with state-of-the-art models. You can run the following command to reproduce the results:
+We also provide the experimental scripts for Table 3 and 4, where we combine TimeSter with state-of-the-art models. You can run the following command to reproduce the results:
 
 ```
 bash ./scripts/long_term_forecast/ECL_script/TimePatchTST.sh
