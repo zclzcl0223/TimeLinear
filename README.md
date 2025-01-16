@@ -7,7 +7,7 @@ In this repository, we present the code of "How Much Can Time-related Features E
 
 ## Data
 
-All the datasets are available at [Autoformer: Google Drive](https://drive.google.com/drive/folders/1ZOYpTUa82_jCcxIdTmyr0LXQfvaM9vIy). You only need to download `electricity`, `ETT-small`, `traffic`, and `weather`.
+All the datasets are available at [Autoformer: Google Drive](https://drive.google.com/drive/folders/1ZOYpTUa82_jCcxIdTmyr0LXQfvaM9vIy). You only need to download `electricity`, `ETT-small`, `traffic`, `weather`, and put them under `./dataset/`.
 
 ## Environment
 
@@ -32,7 +32,7 @@ The default `seq_len` in this repository is `96`. For other experimental setting
 --pred_len
 --batch_size
 --learning_rate
---time_feature_types    # add your time-related features, e.g., HourOfDay DayOfWeek
+--time_feature_types    # add your timestamp features, e.g., HourOfDay DayOfWeek
 --rda                   # reduction rate for the first hidden layer of TimeSter
 --rdb                   # reduction rate for the second hidden layer of TimeSter
 --ksize                 # kernel size for the Cov1d in TimeSter
@@ -55,12 +55,12 @@ bash ./all.sh
 
 ## Results
 
-- Checkpoints for each model will be saved in `checkpoints/`;
-- Training log will be saved in `log/`;
-- Prediction for the testing set will be saved in `results/` (if needed) and `result_long_term_forecast`;
-- Visualization for the results of testing set will be saved in `test_results/` (if `with_curve` is enabled).
+- Checkpoints for each model will be saved in `./checkpoints/`;
+- Training log will be saved in `./log/`;
+- Prediction for the testing set will be saved in `./results/` (if needed) and `result_long_term_forecast`;
+- Visualization for the results of testing set will be saved in `./test_results/` (if `with_curve` is enabled).
 
-Our results have been stored in `result_long_term_forecast` and `results/TimeLinear`.
+Our results have been stored in `result_long_term_forecast` and `./log/TimeLinear`.
 
 ## Acknowledgement
 
